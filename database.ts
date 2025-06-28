@@ -1,14 +1,14 @@
-import { Column, DataSource, Entity } from "typeorm";
+import { Column, DataSource, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Todo {
-  @Column()
+  @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ type: "string" })
   title: string;
 
-  @Column()
+  @Column({ type: "boolean" })
   completed: boolean;
 }
 

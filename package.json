@@ -3,6 +3,9 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "tsx watch index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -12,6 +15,7 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "express": "^5.1.0",
+    "sqlite3": "^5.1.7",
     "tsx": "^4.20.3",
     "typeorm": "^0.3.25"
   }
