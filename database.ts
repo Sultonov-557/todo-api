@@ -5,10 +5,10 @@ export class Todo {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: "string" })
+  @Column({ type: "text" })
   title: string;
 
-  @Column({ type: "boolean" })
+  @Column({ type: "boolean", default: false })
   completed: boolean;
 }
 
@@ -18,3 +18,5 @@ export const datasource = new DataSource({
   synchronize: true,
   entities: [Todo],
 });
+
+datasource.initialize();
