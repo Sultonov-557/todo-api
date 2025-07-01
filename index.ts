@@ -1,11 +1,13 @@
 import "reflect-metadata";
 import express from "express";
 import { datasource, Todo } from "./database";
+import cors from "cors";
 
 const todoRepo = datasource.getRepository(Todo);
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.get("/", async (req, res) => {
   const todos = await todoRepo.find({});
