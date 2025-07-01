@@ -15,5 +15,6 @@ export class Todo {
 export const datasource = new DataSource({
   type: "sqlite",
   database: "todo.db",
+  synchronize: true,
   entities: [Todo],
 });
